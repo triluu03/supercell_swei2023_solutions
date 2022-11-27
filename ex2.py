@@ -71,31 +71,27 @@ def main():
     filename = sys.argv[2]
     with open(f"./tests/ex2/{filename}") as file:
         # Creating Threads
-        thread0 = MyThread(file)
         thread1 = MyThread(file)
-        # thread2 = MyThread(file)
-        # thread3 = MyThread(file)
+        thread2 = MyThread(file)
+        thread3 = MyThread(file)
         # thread4 = MyThread(file)
+        # thread5 = MyThread(file)
         
         # Starting each thread
-        thread0.start()
         thread1.start()
-        # thread2.start()
-        # thread3.start()
+        thread2.start()
+        thread3.start()
         # thread4.start()
+        # thread5.start()
 
         # Join each thread to the main thread
-        thread0.join()
         thread1.join()
-        # thread2.join()
-        # thread3.join()
+        thread2.join()
+        thread3.join()
         # thread4.join()
-
+        # thread5.join()
 
     print(get_users_state(users))
-
-
-                
 
 
 if __name__ == '__main__':
